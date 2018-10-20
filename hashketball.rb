@@ -205,7 +205,7 @@ def big_shoe_rebounds
       if data.class == Hash
         data.each do |data_item|
           binding.pry
-          if shoe_num == nil || [:shoe] > shoe_num
+          if shoe_num == nil || data_item[1][:shoe] > shoe_num
             shoe_num = [:shoe]
             rebounds_num = [:rebounds]
           end
