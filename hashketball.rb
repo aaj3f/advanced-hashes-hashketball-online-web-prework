@@ -196,3 +196,22 @@ def player_stats(player_name)
   end
   hash
 end
+
+def big_shoe_rebounds
+  rebounds_num = nil
+  shoe_num = nil
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if data.class = Hash
+        data.each do |data_item|
+          if shoe_num == nil || [:shoe] > shoe_num
+            shoe_num = [:shoe]
+            rebounds_num = [:rebounds]
+          end
+        end
+      end
+    end
+  end
+  rebounds_num
+end
+            
