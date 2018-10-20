@@ -132,8 +132,8 @@ end
 #good_practices
 
 def num_points_scored(player_name)
-  game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
+  return game_hash.each do |location, team_data|
+    return team_data.each do |attribute, data|
       if data.include?(player_name)
         return data[player_name][:points]
       end
