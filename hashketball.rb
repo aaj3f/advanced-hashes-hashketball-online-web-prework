@@ -117,6 +117,20 @@ def game_hash
   }
 end
 
+def good_practices
+  game_hash.each do |location, team_data|
+    binding.pry
+    team_data.each do |attribute, data|
+      binding.pry
+      data.each do |data_item|
+        binding.pry
+      end
+    end
+  end
+end
+
+good_practices
+
 def num_points_scored(player_name)
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
