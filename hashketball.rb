@@ -170,3 +170,17 @@ def team_names
     team_data[:team_name]
   end
 end
+
+def player_numbers(team_name)
+  game_hash.each do |location, team_data|
+    if team_data[:team_name] == team_name
+      team_data.collect do |attribute, data|
+        if data.class == Hash
+          data.collect do |data_item|
+            data_item[:number]
+          end
+        end
+      end
+    end
+  end
+end
