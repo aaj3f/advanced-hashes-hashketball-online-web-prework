@@ -207,7 +207,7 @@ def big_shoe_rebounds
           binding.pry
           if shoe_num == nil || data_item[1][:shoe] > shoe_num
             shoe_num = data_item[1][:shoe]
-            rebounds_num = [:rebounds]
+            rebounds_num = data_item[1][:rebounds]
           end
         end
       end
