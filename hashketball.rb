@@ -204,6 +204,7 @@ def big_shoe_rebounds
     team_data.each do |attribute, data|
       if data.class == Hash
         data.each do |data_item|
+          binding.pry
           if shoe_num == nil || [:shoe] > shoe_num
             shoe_num = [:shoe]
             rebounds_num = [:rebounds]
