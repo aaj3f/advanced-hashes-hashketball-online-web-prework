@@ -173,10 +173,8 @@ end
 
 def player_numbers(team_name)
   game_hash.each do |location, team_data|
-    #binding.pry
     if team_data[:team_name] == team_name
       return team_data.each do |attribute, data|
-        #binding.pry
         if data.class == Hash
           return data.collect do |data_item|
             data_item[1][:number]
@@ -185,4 +183,16 @@ def player_numbers(team_name)
       end
     end
   end
+end
+
+def player_stats(player_name)
+  hash = {}
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if data.include?(player_name)
+        hash = data[player_name].values
+      end
+    end
+  end
+  hash
 end
